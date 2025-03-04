@@ -126,7 +126,7 @@ async fn upload(
     // Create the request and attach the file to the body
     let client = reqwest::Client::new();
     let mut request = client
-        .post(url)
+        .put(url)
         .header(reqwest::header::CONTENT_LENGTH, file_len)
         .body(file_to_body(on_progress, file));
 
